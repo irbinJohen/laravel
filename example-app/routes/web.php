@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+use App\Http\Controllers\SaludoController;
+
+Route::get('/saludo/{name}', [SaludoController::class, 'saludar']) ->where('name', '[A-Za-z]+');
+
+Route::get('/suma/{num1}/{num2}', [SaludoController::class, 'sumar'])->where('num2','[0-9]+');
+
