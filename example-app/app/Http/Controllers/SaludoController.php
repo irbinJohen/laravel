@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class SaludoController extends Controller
 {
     public function saludar ($name) {
-        
         return "¡Hola, $name!";
     }
     
@@ -16,6 +15,22 @@ class SaludoController extends Controller
         return  $num1+$num2 ;
     }
     
+    public function restar($num1,$num2) {
+        return  $num1-$num2 ;
+    }
+
+    public function multiplicar($num1,$num2) {
+        return  $num1*$num2 ;
+    }
+
+    public function dividir($num1,$num2) {
+        return  $num1/$num2 ;
+    }
+
+    
+
+
+
 }
 
 
